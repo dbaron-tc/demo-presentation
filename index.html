@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/moon.css" id="theme">
+		<link rel="stylesheet" href="dist/custom.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Demo Presentation</h1>
+					<aside class="notes">
+						these are some speaker notes
+					</aside>
+				</section>
+
+				<section>
+					<h2>I'm a subheading</h2>
+					<p>and here some content</p>
+					<p>more content</p>
+				</section>
+
+				<section>
+					<p>this will remain visible for all vertical slides</p>
+					<section>heres some vertical content</section>
+					<section>and some more</section>
+					<section>more stuff...</section>
+				</section>
+
+				<section data-transition="none">
+					<img data-src="images/reading-side.png" alt="reading side">
+				</section>
+
+				<section data-background="https://media.giphy.com/media/3oKIPmDhXaieiJE3Sg/giphy.gif"></section>
+
+				<section>
+					<h2>fragments in DOM order</h2>
+					<ul>
+						<li class="fragment">this will be first</li>
+						<li class="fragment">second</li>
+						<li class="fragment">third</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>not dom order</h2>
+					<ul>
+						<li class="fragment" data-fragment-index="3">this will be last</li>
+						<li class="fragment" data-fragment-index="1">this will be first</li>
+						<li class="fragment" data-fragment-index="2">second</li>
+					</ul>
+				</section>
+
+				<section data-state="my-style">
+					<p>I'm special!</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+				transition: 'convex',
+				controlsLayout: 'edges'
+			});
+		</script>
+	</body>
+</html>
